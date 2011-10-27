@@ -1,0 +1,248 @@
+/**
+* @file      typography.css
+* @author    Canção Nova • Núcleo de Design em Tecnologia da Informação.
+* @project   Site Ricardo Sá
+* @css-for 	 IE 5, IE 6, IE 7, IE 8, IE 9+, Safari 3+, Safari 4, Opera 10+,  Firefox 2, Firefox 3, Firefox 3.6+, Chrome Whatever+
+* 			 Opera 10+ (Opera 9.5 supported background-size but not the keywords)
+* 			 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
+* 
+*/
+
+/**
+* @section TIPOGRAFIA ESPECIAIS fonts
+* Mussica Swash & Frutiger Black
+*/
+
+@font-face {
+    font-family: 'MussicaSwashRegular';
+    src: url('../fonts/MussicaSwashRegular/mussicaswash-webfont.otf');
+    src: url('../fonts/MussicaSwashRegular/mussicaswash-webfont.eot');
+    src: url('../fonts/MussicaSwashRegular/mussicaswash-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MussicaSwashRegular/mussicaswash-webfont.woff') format('woff'),
+         url('../fonts/MussicaSwashRegular/mussicaswash-webfont.ttf') format('truetype'),
+         url('../fonts/MussicaSwashRegular/mussicaswash-webfont.svg#MussicaSwashRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+    font-family: 'HelveticaNeueLT-LightCond';
+    src: url('../fonts/HelveticaNeue47LC/HelveticaNeueLT-LightCond.eot');
+    src: url('../fonts/HelveticaNeue47LC/HelveticaNeueLT-LightCond.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HelveticaNeue47LC/HelveticaNeueLT-LightCond.woff') format('woff'),
+         url('../fonts/HelveticaNeue47LC/HelveticaNeueLT-LightCond.ttf') format('truetype'),
+         url('../fonts/HelveticaNeue47LC/HelveticaNeueLT-LightCond.svg#HelveticaNeueLT-LightCond') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+	
+@font-face {
+    font-family: 'Helvetica57-Condensed';
+    src: url('../fonts/HelveticaNeue57C/Helvetica57-Condensed.eot');
+    src: url('../fonts/HelveticaNeue57C/Helvetica57-Condensed.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HelveticaNeue57C/Helvetica57-Condensed.woff') format('woff'),
+         url('../fonts/HelveticaNeue57C/Helvetica57-Condensed.ttf') format('truetype'),
+         url('../fonts/HelveticaNeue57C/Helvetica57-Condensed.svg#Helvetica57-Condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'FrutigerBlackCn';
+    src: url('../fonts/FrutigerBlackCn/ftblc__-webfont.eot');
+    src: url('../fonts/FrutigerBlackCn/ftblc__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FrutigerBlackCn/ftblc__-webfont.woff') format('woff'),
+         url('../fonts/FrutigerBlackCn/ftblc__-webfont.ttf') format('truetype'),
+         url('../fonts/FrutigerBlackCn/ftblc__-webfont.svg#FrutigerBlackCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+
+/**
+* @section TIPOGRAFIA tags de título, parágrafo, links e fonts
+* Esse style contém todas as informações relacionadas a títulos, textos e links
+*/
+
+
+h1 { 
+	font-size: 26px; 
+	line-height: 28px;
+	}
+			
+h2, h2 a {
+	font-size: 24px; 
+	line-height: 24px;
+	}
+			
+h3, h3 a { 
+	font-size: 14px; 
+	line-height: 16px;
+	}
+
+h1, h2, h2 a, h3, h3 a {
+    font-family: Helvetica57-Condensed, Helvetica,"Arial Narrow",Arial, sans-serif;
+	color:rgb(2, 58, 97);
+	font-weight: normal; 
+	text-decoration:none;
+	}
+
+h1{
+	text-indent:-9999px;
+}
+
+
+
+p { 
+    font:normal 12px Arial, Helvetica, verdana, sans-serif;
+	color:rgb(51, 51, 51);
+	margin-bottom: 18px; 
+	}
+
+p, ul, ol {
+	margin: 0 0 1em 0;
+	text-align: justify;
+	line-height: 2em;
+	}
+
+article p{
+	font-size:12px;
+	}
+
+
+a { 
+    font::normal 12px/14px Arial, Helvetica, verdana, sans-serif;
+	text-decoration:underline;
+	color:rgb(51, 51, 51);
+	}
+
+a:hover { 
+	text-decoration:none;
+	color:rgb(2, 58, 97);
+	}
+
+time{
+    font:11px Helvetica,"Arial Narrow",Arial, sans-serif;
+	color: rgb(100, 100, 100);
+	float:left;
+	margin-top:2px;
+	}
+
+img {
+	border: none;
+	}
+
+img[align="left"], img.left, a img.alignleft {
+	float: left;
+	margin-right: 15px;
+	}
+
+img[align="right"], img.right, a img.alignright {
+	float: right;
+	margin-left: 15px;
+	}
+
+blockquote, cite{
+	background:transparent url(../images/quote.gif) no-repeat top left;
+	font: italic 16px/18px Georgia, "Times New Roman", Times, serif;
+	color:rgb(74, 96, 113);
+	padding:15px 0 15px 25px;
+	}
+
+blockquote p, cite p{
+	font: italic 16px/18px Georgia, "Times New Roman", Times, serif;
+	color:rgb(74, 96, 113);
+	}
+
+hr {
+	width:100%;
+	color:#DADADA;
+	}
+
+
+legend {
+	display: none;
+}
+/*.separador {
+	width:100%;
+	/*color:#946d3d;
+	padding:1px;
+	float:left;
+	border:none;
+	background:transparent url(../images/separator.png) no-repeat center;
+	}*/
+			
+#navPro li a{
+	color:#002535;	
+	font: 11px 'FrutigerBlackCn', helvetica, arial, verdana;	
+	text-transform:uppercase;
+	letter-spacing: .2em;
+	text-decoration:none;	
+	}
+		
+#navPro li a:hover{
+	color:#fff;
+	}
+
+#mensagemAnt > h2{ 
+	font-size: 16px;
+	line-height:50px;
+	color:#002535;
+	text-transform:uppercase;
+	margin: 0 25px; 
+	display:block;
+	}
+
+
+/*Lista post */
+ul.list_post_anim .box-post {
+	cursor:pointer;
+	position: relative;
+	display:inline-block;
+	width:100%;
+	}
+
+ul.list_post_anim .box-post time{
+	font: 11px Arial, Helvetica, verdana, sans-serif;
+	font-weight:bold;
+	text-transform:none!important;
+	padding:5px 0px;
+	letter-spacing:0px !important;
+	}
+
+ul.list_post_anim .box-post h2 a{
+	font-size:12px;
+	float:left;	
+	text-decoration:none;
+	margin-left:0px;
+	color:rgb(2, 58, 97);
+	padding:5px 0px;
+	/*background:url(../images/arrows.gif) no-repeat left 6px;
+	padding-left: 18px;	*/
+	display: block;
+	}
+		
+.box-post h2 a{ 
+	font: 12px Arial, Helvetica, verdana, sans-serif;
+	color:#444444;
+	}
+
+.box-post time{ 
+	text-transform:uppercase;
+	color:#002535;
+	float:left;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

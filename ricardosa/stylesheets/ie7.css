@@ -1,0 +1,36 @@
+header, .box, .content-box, article, section{
+	width:auto;
+	}
+
+#content-top{
+	width:300px;
+	margin-right:10px;
+	}
+
+nav, #navPro{
+	display:inline-block;
+	margin-right:30px;
+	}
+
+#searchform{
+	display:inline;
+	
+	border:1px solid #ccc;
+	}
+#searchform #searchsubmit {
+	width:50px;
+	background:#fff;
+	background-image:none;
+	
+	}
+hr{
+	width:99%;
+	display:block;
+	}
+
+#meta-post{
+	clear:both;
+	display:inline-block;
+	width:auto;
+	}
+

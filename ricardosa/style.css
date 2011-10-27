@@ -1,0 +1,61 @@
+/*
+Theme Name: Ricardo Sá
+Theme URI: http://www.ricardosa.com/
+Description: Tema utilizado para o site do Ricardo Sá.
+Author: Canção Nova • Núcleo de Design em Tecnologia da Informação.
+Author URI: http://www.cancaonova.com
+Version: 1.0
+*/
+
+/**
+* @file      style.css
+* @author    Canção Nova • Núcleo de Design em Tecnologia da Informação.
+* @project   Site Ricardo Sá
+* @version   1.0
+* @copyright 2011 Canção Nova
+* @css-for   IE 5, IE 6, IE 7, IE 8, IE 9+, Safari 3+, Safari 4, Opera 10+,  Firefox 2, Firefox 3, Firefox 3.6+, Chrome Whatever+
+* 			 Opera 10+ (Opera 9.5 supported background-size but not the keywords)
+* 			 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
+*
+* Style Container
+* Importa todos os estilos necessários para a estrutura do tema.
+*/
+
+/**
+* @section 01.RESET STYLE para HTML5
+* Style que reseta todos os valores em default.
+*/
+	@import url(stylesheets/html5reset.css);
+
+/**
+* @section 02.ESTRUTURA GLOBAL html, body, #page-wrap...
+* Style que contempla as definições para o layout.
+*/
+	@import url(stylesheets/globalstructure.css);
+
+/**
+* @section 03.TIPOGRAFIA a, h1, h2, p...
+* Style que contempla as definições para a tipografia, fonts e links.
+*/
+	@import url(stylesheets/typography.css);
+		
+/**
+* @section 04.FORMULÁRIOS button, input, label...
+* Style que contempla as definições para os formulários.
+*/
+	@import url(stylesheets/forms.css);		
+	
+/**
+* @section 05.COMENTÁRIOS avatar, comentários...
+* Style que contempla as definições para os comentários.
+*/
+	@import url(stylesheets/coments.css);		
+	
+/**
+* @section 06.PRINT
+* Style que contempla as definições para impressões.
+*/
+	@import url(stylesheets/print.css);	
+
+	@import url(stylesheets/tipTip.css);
+			

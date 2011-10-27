@@ -1,0 +1,71 @@
+/**
+* @file      coments.css
+* @author    Canção Nova • Núcleo de Design em Tecnologia da Informação.
+* @project   Site Ricardo Sá
+* @css-for 	 IE 5, IE 6, IE 7, IE 8, IE 9+, Safari 3+, Safari 4, Opera 10+,  Firefox 2, Firefox 3, Firefox 3.6+, Chrome Whatever+
+* 			 Opera 10+ (Opera 9.5 supported background-size but not the keywords)
+* 			 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
+* 
+*/
+
+/**
+* @section LISTA DE COMENTÁRIOS
+* Avatar, Nome, data e comentários...
+*/
+
+#coment h2{
+	margin:0;
+	padding:20px 0 5px;
+	}
+
+#coment .commentlist{
+	margin:0 0 15px;
+	padding:15px 0;
+	
+	}
+
+
+.commentlist li{
+	list-style: none;
+	border-bottom:1px solid #ccc;
+	margin:15px 0px;
+	}
+
+.commentlist li figure img{
+	float: left;
+	display:block;
+	margin-right: 10px;
+	padding:2px;
+	background:#fff;
+	border:1px solid #CCC;
+	}
+
+.commentlist li .comment_content p{
+	font:11px/13px Arial, Helvetica, Verdana, Serif;
+	color:#777;
+	margin:15px 0;
+	}
+
+.commentlist li .comment_content time{
+	/*margin:0px;
+	padding:0px;
+	line-height:-1px;*/
+	}
+
+
+/* Mensagem de comentários fechados */
+.comment-close-mensage{
+	margin:25px;
+	padding:10px;
+	}
+	
+.comment-close-mensage p{
+	font: 14px/16px FrutigerBlackCn, Helvetica,"Arial Narrow",Arial, sans-serif;
+	color:#666;
+	text-align:center;
+	}
+	
+.comment-close-mensage p a{
+	text-decoration:none;
+	color:rgb(2, 58, 97);
+	}

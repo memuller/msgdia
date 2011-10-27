@@ -1,0 +1,454 @@
+/**
+* @file      globalstructure.css
+* @author    Canção Nova • Núcleo de Design em Tecnologia da Informação.
+* @project   Site Ricardo Sá
+* @css-for 	 IE 5, IE 6, IE 7, IE 8, IE 9+, Safari 3+, Safari 4, Opera 10+,  Firefox 2, Firefox 3, Firefox 3.6+, Chrome Whatever+
+* 			 Opera 10+ (Opera 9.5 supported background-size but not the keywords)
+* 			 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
+* 
+*/
+
+/**
+* @section CORPO estrutura de corpo
+* Esse style configura toda a estrutura de layout
+*/
+
+html {
+	background:url(../images/background.jpg) no-repeat fixed top center transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/background.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/background.jpg', sizingMethod='scale')";
+	overflow-x: hidden;
+	overflow-y: auto;
+	behavior: url(ie-css3.htc);
+	}
+
+body {
+	padding:0 12.50em 0 23.33em;
+	margin:0;
+	font: 12px/18px Arial, sans-serif;
+	color: #4f4f4f;
+	height:100%;
+	width:auto;
+	}
+
+#page-wrapper{ 
+	position: relative;
+    margin: 0px auto;
+	width: 90%;
+	min-width:800px!important;
+	}
+
+
+/**
+* @section TOPO header
+* Esse style configura o topo: logotipo, navegação e busca
+*/
+header{
+	height: 200px;
+	width: 100%;
+	margin-top:20px;
+	float:left;
+	}
+
+
+
+#content-top{
+	width:280px;
+	height:240px;
+	float:right;
+	margin:0px;
+	padding:0px;
+	}
+
+nav{
+	width: 330px;
+	height: 140px;
+	float: right;
+	margin:0;
+	}
+
+
+	
+nav #navPro{
+	float: right;
+	margin-bottom: 3px;
+	}
+
+nav #navPro li{	
+	width: 280px;
+	margin: 0 0 3px 0; 
+	list-style:none; 
+	text-align:right;
+	}
+	
+nav #navPro li a{
+	background:rgb(226, 237, 243);
+	display:inline;
+	width: 260px;
+	padding: 3px 5px 3px 15px;
+	}
+
+
+
+/**
+* @section TOPO header
+* Esse style configura o topo: logotipo, navegação e busca
+*/
+
+.box{
+	width: 100%;
+	min-width:600px !important;
+	margin: 15px auto; 
+	display:block;
+	float:left;
+	background:rgb(238, 243, 250) url(../images/background_box.png) repeat-x left top;
+	-moz-box-shadow: 0 0 3px rgb(92, 100, 103);
+	-webkit-box-shadow: 2px 2px 3px #969696; /* for Safari and Chrome */
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=145, Strength=3);
+   /* background-color:rgb(238, 243, 250);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#DDE8ED')"; 
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#DDE8ED');
+	opacity: .9;  other browsers  and IE9+
+	filter: alpha(opacity=90);  IE6+ 
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);  IE6+ 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=90)";  this works in IE8 only */
+	position:relative;
+	behavior: url(ie-css3.htc);
+	}
+
+
+/*section, aside  { 
+	
+	}*/
+
+section article, aside > div, section > div { 
+	margin: 0 25px 25px; 
+	display:block;
+	text-align:justify;
+	font: 12px/25px Arial, sans-serif;
+	padding:25px 0 0;
+	}
+
+* html section article, * html .content-box{
+	padding: 25px;
+	}
+
+/* botão enviar/ler comentário */
+.box-comentariobtn{
+	width:100%;
+	height:50px;
+	margin:20px 0;
+	}
+	
+.box-comentariobtn a.comentariobtn{
+	width:125px;
+	height:50px;
+	background:url(../images/btn_ler_coment.jpg) no-repeat;
+	display:block;
+	}
+
+/* social media buttons on post page  */
+.socialcurtirpost {
+	width:580px;
+	}
+	
+.socialcurtirpost ul {
+	height: 35px;
+	}
+	
+.socialcurtirpost ul li {
+	float:left;
+    list-style:none;
+	height:25px;
+	padding:0 !important;
+	margin: 0 auto;
+	}
+
+/*.socialcurtirpost ul li{
+	}
+	
+.sendFriend{
+	width:32px;
+	height:23px;
+	float:left;
+	background:transparent url(../images/btn_send_friend.png) no-repeat;
+	text-indent:-99999px;
+	display:none;
+	}
+
+#meta-post{
+	width:100%;
+	margin:10px 0;
+	display:block;
+	}*/
+	
+.socialmediapost li{
+	list-style:none;
+	float:left;
+	min-width:16px;
+	height:16px;
+	display:block;
+	padding-right:3px;
+	border-right:1px dotted #999;
+	margin-left:3px;
+	}
+
+.socialmediapost li .sharing, .socialmediapost li .snap_nopreview, .socialmediapost li .robots-nocontent{
+	padding:0px!important;
+	margin:0px!important;
+	}
+
+.socialmediapost li .sharing ul, .socialmediapost li .snap_nopreview ul, .socialmediapost li .robots-nocontent ul{
+	width:16px !important;
+	height:16px!important;
+	padding:0px!important;
+	margin:0px!important;
+	}
+
+.socialmediapost li div ul .share-email, .socialmediapost li div ul .share-regular, .socialmediapost li div ul .share-service-visible{
+	width:16px !important;
+	height:16px!important;
+	padding:0px!important;
+	margin:0px!important;
+	border:none!important;
+	}
+
+.socialmediapost li div ul .share-end{
+	display:none!important;
+	padding:0px!important;
+	margin:0px!important;
+	border:none!important;
+	}
+
+.socialmediapost li div.sharing ul li.share-regular a.share-email{
+	width:16px;
+	height:16px;
+	background:transparent url(../images/mail.png) no-repeat!important;
+	display:block;
+	padding:0px!important;
+	margin-top:1px!important;
+	text-indent:-99999px!important;	
+	}
+
+.ngg-galleryoverview{
+	border-top:1px solid #D4D7D8;
+	padding-top:15px;
+	}
+
+.ngg-gallery-thumbnail{
+	margin:0.5em;
+	}
+
+/*trocar fonte*/
+#changeFont{
+	float:right;
+	}
+	
+#changeFont .aumentaFont, .diminuiFont, .resetFont{
+	width:16px;
+	height:16px;
+	float:left;
+	border:none;
+	margin:0 2px;
+	background:#fff url(../images/btn_big_letter.png) no-repeat;
+	text-indent:-99999px
+	}
+
+#changeFont .diminuiFont{
+	background:#fff url(../images/btn_small_letter.png) no-repeat;	
+	}
+
+#changeFont .resetFont{
+	background:#fff url(../images/btn_reset_letter.png) no-repeat;	
+	}
+
+
+
+
+
+div p.wp-caption-text{
+	font:italic 10px Georgia, "Times New Roman", Times, serif;
+	color:#7b7b7b;
+	text-align:center;
+}
+		
+
+
+
+/*Lista post */
+
+ul.list_post_anim {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+
+
+/**
+* Produtos
+*
+*/
+
+.prod-box{
+	margin:10px 0;
+	}
+
+.item-prod-box{
+	width:100%;
+	min-width:600px!important;
+	height:auto;
+	}
+	
+.item-prod-box .prod-thumb{
+	width:150px;
+	margin-right:20px;
+	float:left;	
+	}
+
+.item-prod-box hgroup{
+	display:block;
+	margin-bottom:10px;
+		}
+
+.item-prod-box hgroup h3{
+	font-size:15px;
+	color:#333;
+	line-height:16px;
+	}
+
+.item-prod-box p{
+	font-size:12px;
+	color:#999;
+	}
+
+/*.item-prod-box .socialmedia-prod{
+	min-width:380px!important;
+	padding-top:10px;
+	}*/
+
+
+/**
+* @section RODAPÉ footer
+* Esse style configura o rodapé: menus, copyright...
+*/
+footer{
+	width: 100%;
+	margin:5px 0 10px;
+	float:left;
+	background:transparent url(../images/sombra_rodape.png) no-repeat top center;
+	clear:both;
+	}
+	
+footer > div { 
+	margin: 0; 
+	padding:0;
+	}
+
+footer > h3{
+	text-transform:uppercase;
+	font-size:13px;
+	margin-bottom:5px;
+	}
+	
+footer .social-foot{
+	width:100%;
+	height:45px;
+	border-top:5px solid #578296;
+	border-bottom:1px solid #CDE5E7;
+	padding: 10px 0;
+	margin:0 0 10px;
+	}
+	
+footer .social-foot span a{ 
+	float:right;
+	color:#fff;
+	text-decoration:none!important;
+	}
+	
+footer .social-foot ul li{
+	float:left;
+	list-style:none;
+	margin-left:5px;
+	}
+
+footer .social-foot ul li a{
+	width:45px;
+	height:45px;
+	display:block;
+	text-indent:-99999px;
+	}
+
+footer .social-foot ul li.ico-rss{
+	background: transparent url(../images/ico-rss.png) no-repeat left ;	
+	}
+footer .social-foot ul li.ico-blog{
+	background: transparent url(../images/ico-blog.png) no-repeat left ;	
+	}
+footer .social-foot ul li.ico-facebook{
+	background: transparent url(../images/ico-facebook.png) no-repeat left ;	
+	}
+footer .social-foot ul li.ico-twitter{
+	background: transparent url(../images/ico-twitter.png) no-repeat left ;	
+	}
+footer .social-foot ul li.ico-gentedefe{
+	background: transparent url(../images/ico-gentedefe.png) no-repeat left ;	
+	}
+
+footer address ul, footer address small{
+	float:right;
+	line-height:0px;
+	}
+
+footer address ul li{
+	float:left;
+	color:#fff;
+	}
+
+footer address ul li a, footer address small{
+	font:normal 11px Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration: none!important;
+	margin:0;
+	padding:0;
+	}
+
+footer address small{
+	display:block;
+	}
+
+	
+/**
+* @section CLASSES COMUNS
+* Esse style configura as classes utilizadas em todo o tema: clear, alinhamentos...
+*/
+
+
+.clear:after{
+	content:".";
+	height:0;
+	visibility:hidden;
+	display:inline-block;
+	display:block;
+	clear:both;
+	zoom:1;
+	}
+	
+* html .clear{
+	height:1%;
+	}
+
+* html :focus, :hover, :active{
+	outline: 0;
+	}
+	
+.alignright{
+	float:right;
+	}
+
+.alignleft{
+	float:left;
+	}

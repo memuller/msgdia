@@ -1,0 +1,218 @@
+/**
+* @file      forms.css
+* @author    Canção Nova • Núcleo de Design em Tecnologia da Informação.
+* @project   Site Ricardo Sá
+* @css-for 	 IE 5, IE 6, IE 7, IE 8, IE 9+, Safari 3+, Safari 4, Opera 10+,  Firefox 2, Firefox 3, Firefox 3.6+, Chrome Whatever+
+* 			 Opera 10+ (Opera 9.5 supported background-size but not the keywords)
+* 			 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
+* 
+*/
+
+/**
+* @section FORMS form, input, button, label...
+* Esse style configura todos os itens de formulários
+*/
+
+:focus{
+	outline:0!important;
+	}
+	
+form {
+	margin:0 25px 25px;
+	padding:10px 0;
+	}
+	
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	}
+
+label{
+	font: bold 11px solid Arial, Helvetica, sans-serif;
+	color:#808080;
+	margin-bottom:5px;
+	padding:0;
+	display:block!important;
+	}
+
+
+* html li label{
+	margin-bottom:-5px;
+	}
+
+/**
+* @section BUSCA
+* campo de busca do topo */
+
+
+#searchform {
+	background:#fff;
+	float: right;
+	margin:5px 0px 0px !important;
+	-webkit-box-shadow:0 0 2px #ccc;
+	-moz-box-shadow:0 0 2px #ccc;
+	box-shadow:0 0 2px #ccc;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	padding: 7px 0 0 10px;
+	width: 280px;
+	height: 24px;
+	behavior: url(ie-css3.htc);
+	}
+
+
+
+* html #searchform {
+	border: 1px solid #ddd;
+	padding-right:0px;
+	}
+
+#searchform #s, #searchform #searchsubmit {
+	border: 0;
+	margin: 0 !important;
+	padding: 0 !important;
+	}
+
+#searchform #s {
+	width: 80%;/**/
+	display: block;
+	float: left;
+	margin-top: 2px;
+	font-size: 11px;
+	}
+
+#searchform #searchsubmit {
+	width: 25px;
+	height: 18px;
+	display: block;
+	float: right;
+	border-left:1px solid #DADADA;
+	cursor: pointer;
+	background: transparent url(../images/searchicon.png) no-repeat center center;
+	text-indent: -9999px;
+	}
+	
+* html #searchform #searchsubmit {
+	width:50px;
+	background:#fff;
+	background-image:none;
+	}
+
+form li{
+	list-style:none;
+	margin:5px;
+	}
+
+* html form li input, form li textarea{
+	margin:5px;
+	}
+
+form li input[type="text"], form li textarea{
+	font: 12px Arial, Helvetica, Verdana, Serif;
+	color: #999;
+	
+    background: url(../images/fieldbg.gif) repeat-x center top #fff;
+	
+	border: 1px solid #ccc;	
+	background: #f9f9f9;
+
+	
+	-webkit-box-shadow: 0 0 2px #ccc;
+	-moz-box-shadow: 0 0 2px #ccc;
+	box-shadow: 0 0 2px #ccc;
+	
+	 border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	
+	padding: 5px;
+	
+	resize: none;	
+	overflow: auto;
+	
+	behavior: url(ie-css3.htc);	
+	}
+	
+form li input[type="text"]:focus, form li textarea:focus{
+	border: 1px solid #7bc1f7;
+ 	box-shadow: 0px 0px 3px #7bc1f7;
+   	-moz-box-shadow: 0px 0px 3px #7bc1f7;
+   	-webkit-box-shadow: 0px 0px 3px #7bc1f7;
+   	background-color:#E8F2FF;	
+	
+	} 
+
+form li input[type="submit"]{
+	background:#5F8295;
+	color:#fff;
+	font-weight:bold;
+	width:130px;
+	padding:5px;
+	height:auto;
+	cursor:pointer;
+	margin-top:10px;
+	border:none;
+	}
+
+	
+form li input[type="submit"]:focus{
+	border: 0 !important;	
+	}
+	
+textarea{
+	width: 55%;
+	padding:5px;
+	height: 5em;
+
+	}
+		
+
+
+#commentform hr {
+	width:56%;
+	color:#946d3d;
+	margin:20px 0;
+	}
+	
+	
+
+
+
+
+
+
+	
+
+
+
+
+.codigo_span{
+	background:url(../images/enviar_comment.gif) no-repeat;
+	width:132px;
+	height:42px;
+	cursor:pointer;
+	color:#fff;
+	border:none;
+	font-weight:bold;
+	margin-top:30px;
+	}
+	
+	
+input.textbox, .textfield, #stafForm input{
+	background:#F9F9F9 none repeat scroll 0 0;
+}
+
+.textfield{
+	padding:5px;
+	margin-right:15px;
+	width:135px !important;
+}
+
+
+
+
+

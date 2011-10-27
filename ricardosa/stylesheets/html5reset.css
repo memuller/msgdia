@@ -1,0 +1,268 @@
+/**
+* @file      reset.css
+* @author    Canção Nova • Núcleo de Design em Tecnologia da Informação.
+* @project   Site Ricardo Sá
+* @css-for 	 IE 5, IE 6, IE 7, IE 8, IE 9+, Safari 3+, Safari 4, Opera 10+,  Firefox 2, Firefox 3, Firefox 3.6+, Chrome Whatever+
+* 			 Opera 10+ (Opera 9.5 supported background-size but not the keywords)
+* 			 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
+* 
+*/
+
+/**
+* @section reset styles
+* Esse style reseta todas as propriedades que em default
+* Modificado para HTML5
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+  	}
+
+article, aside, figure, footer, header, hgroup, nav, section {
+	display: block;
+	}
+
+/* Imagens sensíveis e outros objetos incorporados
+   Nota: mantendo IMG aqui vai causar problemas se você estiver usando imagens de foreground (primeiro plano) como sprites.
+   Se essa configuração padrão para imagens está causando problemas, você pode querer substituí-la por uma classe .responsive. */
+img, object, embed {
+	max-width: 100%;
+	}
+
+/* forçar uma barra de rolagem vertical para evitar que a página pule */
+html{ 
+	overflow-y: scroll;
+	}
+
+/* usamos um monte de UL's que não são marcadores.
+  não se esqueça de restaurar os marcadores no conteúdo. */
+ul {
+	list-style: none;
+	}
+
+blockquote, q {
+	quotes: none;
+	}
+	
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+	}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	}
+	
+del {
+	text-decoration: line-through;
+	}
+	
+abbr[title], dfn[title]{
+	border-bottom: 1px dotted #000;
+	cursor: help;
+	}
+	
+/* Tabelas ainda precisa cellspacing = "0" na marcação */
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+	
+th {
+	font-weight: bold;
+	vertical-align: bottom;
+	}
+	
+td{
+	font-weight: normal;
+	vertical-align: top;
+	}
+	
+hr{
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+	}
+	
+input, select{
+	vertical-align: middle;
+	}
+	
+pre{
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (e 2.1 bem como, atualmente)*/
+	word-wrap: break-word; /* IE */
+	}
+	
+input[type="radio"]{
+	vertical-align: text-bottom;
+	}
+	
+input[type="checkbox"]{
+	vertical-align: bottom;
+	*vertical-align: baseline;
+	}
+	
+.ie6 input {
+	vertical-align: text-bottom;
+	}
+
+select, input, textarea{
+	font: 99% sans-serif;
+	}
+
+table {
+	font-size: inherit;
+	font: 100%;
+	}
+
+/* Tratamento focus acessíveis
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active{
+	outline: none;
+	}
+	
+small{ 
+	font-size: 85%;
+	}
+	
+strong, th {
+	font-weight: bold;
+	}
+	
+td, td img{
+	vertical-align: top;
+	}
+	
+/* Certifique-se de sup e sub não estragar com o seu line-heights
+   gist.github.com/413930 */
+sub, sup{
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+  	}
+	
+sup{ 
+	top: -0.5em;
+  	}
+	
+sub {
+	bottom: -0.25em;
+	}
+	
+/* padronizar todos os elementos monospaced */
+pre, code, kbd, samp{
+	font-family: monospace, sans-serif;
+	}
+	
+/* hand cursor em elementos clicáveis  */
+.clickable,label, input[type=button], input[type=submit], button{
+	cursor: pointer;
+	}
+	
+/* Webkit browsers adiciona 2px de margin outside do chrome de elementos form */
+button, input, select, textarea{
+	margin: 0;
+	}
+	
+/* fazer botões bonitos em IE */
+button {
+	width: auto;
+	overflow: visible;
+	}
+	
+/* imagens mais atraente em escala no IE7 */
+.ie7 img{
+	-ms-interpolation-mode: bicubic;
+	}
+	
+/* impedir a imagem de BG tremida com hover */
+.ie6 html{
+	filter: expression(document.execCommand("BackgroundImageCache", false, true));
+	}
+
+/* Adicionar clear e alguns floats */
+.clearfix:before, .clearfix:after{
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	}
+	
+.clearfix:after{
+	clear: both;
+	}
+	
+.clearfix{
+	zoom: 1;
+	}
+
+
+/* Ok, este é o lugar onde a diversão começa.
+   ------------------------------------------------------------------------------- */
+
+/* novo Linux e Windows-amigáveis sans-serif font grande quantidade: http://mky.be/fontstack */
+body{
+	font: 13px Helmet, Freesans, sans-serif;
+	}
+
+/* Usando fontes locais? certifique-se de ler sobre Paul Irish's 
+   Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* off-black para text */
+body, select, input, textarea{
+	color: #333;
+	}
+	
+a{
+	color: #03f;
+	}
+	
+a:hover{
+	color: #69f;
+	}
+	
+/* Personalizando text-selection colors (remover qualquer text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{
+	background: #fcd700;
+	color: #fff;
+	text-shadow: none;
+	}
+
+::selection{
+	background: #fcd700;
+	color: #fff;
+	text-shadow: none;
+	}
+	
+/* j.mp/webkit-tap-highlight-color */
+a:link{
+	-webkit-tap-highlight-color: #fcd700;
+	}
+	
+ins{
+	background-color: #fcd700;
+	color: #000;
+	text-decoration: none;
+  	}
+	
+mark{
+  	background-color: #fcd700;
+  	color: #000;
+  	font-style: italic;
+  	font-weight: bold;
+  	}

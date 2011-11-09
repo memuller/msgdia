@@ -82,43 +82,10 @@
 <?php comments_template(); ?>
 <!-- // Template dos comentários -->
 
-<!--<section id="list-post" class="box">
- Box Mensagem Anteriores -->
-<aside id="mensagemAnt" class="box">
-	<div class="content-box">
-    	<!-- Título da Página -->
-    	<h2>mensagens anteriores</h2>
-		<hr />
-		<!-- Loop busca 5 mensagens anteriores -->
-		<?php global $myOffset;
-			  $myOffset = 1;
-			  $temp = $wp_query;
-			  $wp_query= null;
-			  $wp_query = new WP_Query();
-			  $wp_query->query('offset='.$myOffset.'&showposts=5'.'&paged='.$paged.'&category_name=mensagem'); ?>
-            
-			<!-- Lista de Posts anteriores -->
-            <ul class="list_post_anim">
-				<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-				<li class="box-post" id="post-<?php the_ID(); ?>">
-					<time><?php the_time('d/m/Y' ) ?>&nbsp;&nbsp;-&nbsp;&nbsp;</time>
-                    <h2><a class="link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                </li>
-                <?php endwhile; ?>
-            </ul>
-			<!-- Fim Lista de Posts anteriores -->
-            
-            <hr />
-            
-            <!-- Links ver todas as imagens anteriores ou todas por data -->
-            <div>
-            	<span><a href="<?php echo get_option('home'); ?>/todas-as-mensagens/" title="ver todas as mensagens"><?php _e('ver todas as mensagens'); ?></a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo get_option('home'); ?>/arquivos/" title="ver todos os arquivos por data"><?php _e('ver todos os arquivos por data'); ?></a></span>
-            </div>
-		
-		<?php $wp_query = null; $wp_query = $temp;?>
-		<!-- Fim do Loop busca 5 mensagens anteriores -->
-	</div>
-</aside>
-<!-- Fim Box Mensagem Anteriores -->
+<?php
+	$current_post = $post ;
+	$posts = query_posts(array('post_type'=>'mensagens' )) ;
+	require '_previous_messages_box.php' ;
+?>
 
 <?php get_footer(); ?> 

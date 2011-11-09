@@ -24,13 +24,46 @@ if ( function_exists( 'add_image_size' ) ) {
     	add_image_size( 'produtos',150, 150, true );
 }
 
+define('msgdia_ricardosa_programas_page_id', 68) ;
+define('msgdia_ricardosa_release_page_id', 66) ;
+define('msgdia_ricardosa_sobre_page_id', 31) ;
+
+function remove_unused_post_menus(){
+	global $menu ;
+	if( ! current_user_can('manage_options') ){
+		$restricted = array(__('Posts'), __('Media'), __('Links'), __('Pages'));
+		end ($menu);
+		while (prev($menu)){
+			$value = explode(' ',$menu[key($menu)][0]);
+			if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
+		}
+	}
+}
+add_action('admin_menu', 'remove_unused_post_menus') ;
+
+function informative_shortcuts_release(){
+	echo " 	<script type='text/javascript'>
+				window.location = '". get_bloginfo('siteurl') . '/wp-admin/post.php?action=edit&post=' . msgdia_ricardosa_release_page_id . "';
+			</script>
+	" ;
+}
+http://apps.local/msgdia/wp-admin/images/menu.png?ver=20100531
+function add_shortcut_menus(){
+	add_menu_page('Informativos', 'Informativos', 'edit_posts', 'inf_shortcuts_main' , 'informative_shortcuts_main', '', 4);
+	add_submenu_page('inf_shortcuts_main', 'Release', 'Release', 'edit_posts', 'inf_shortcuts_main', 'informative_shortcuts_release');
+	add_submenu_page('inf_shortcuts_main', 'Programas', 'Programas', 'edit_posts', 'inf_shortcuts_programas', 'informative_shortcuts_programas');
+	
+}
+
+add_action('admin_menu', 'add_shortcut_menus') ;
+
 // CUSTOM POST TYPE FOR MENSAGENS DO DIA.
 register_post_type('mensagens', array(	'label' => 'Mensagens Diárias','description' => 'Mensagens do Dia, como veiculadas no Portal.','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => 'msgs'),'query_var' => true,'has_archive' => true,'menu_position' => 2,'supports' => array('title','editor','comments','revisions',),'labels' => array (
   'name' => 'Mensagens Diárias',
   'singular_name' => 'Mensagem do Dia',
-  'menu_name' => 'Mensagens do Dia',
+  'menu_name' => 'Mensagens',
   'add_new' => 'Adicionar',
-  'add_new_item' => 'Adicionar mensagem',
+  'add_new_item' => 'Adicionar Mensagem do Dia',
   'edit' => 'Edit',
   'edit_item' => 'Edit Mensagem do Dia',
   'new_item' => 'Nova mensagem',

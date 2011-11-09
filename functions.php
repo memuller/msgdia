@@ -10,9 +10,6 @@ function jquery_enqueue() {
 add_action('init', 'jquery_enqueue');	
 
 
-
-
-
 // POST THUMBNAILS
 
 if ( function_exists( 'add_theme_support' ) ) {
@@ -27,7 +24,23 @@ if ( function_exists( 'add_image_size' ) ) {
     	add_image_size( 'produtos',150, 150, true );
 }
 
-
+// CUSTOM POST TYPE FOR MENSAGENS DO DIA.
+register_post_type('mensagens', array(	'label' => 'Mensagens Diárias','description' => 'Mensagens do Dia, como veiculadas no Portal.','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => 'msgs'),'query_var' => true,'has_archive' => true,'menu_position' => 2,'supports' => array('title','editor','comments','revisions',),'labels' => array (
+  'name' => 'Mensagens Diárias',
+  'singular_name' => 'Mensagem do Dia',
+  'menu_name' => 'Mensagens do Dia',
+  'add_new' => 'Adicionar',
+  'add_new_item' => 'Adicionar mensagem',
+  'edit' => 'Edit',
+  'edit_item' => 'Edit Mensagem do Dia',
+  'new_item' => 'Nova mensagem',
+  'view' => 'View Mensagem do Dia',
+  'view_item' => 'View Mensagem do Dia',
+  'search_items' => 'Search Mensagens Diárias',
+  'not_found' => 'No Mensagens Diárias Found',
+  'not_found_in_trash' => 'No Mensagens Diárias Found in Trash',
+  'parent' => 'Parent Mensagem do Dia',
+),) );
 
 // add ie conditional html5 shim to header
 function add_ie_html5_shim () {
@@ -36,19 +49,6 @@ function add_ie_html5_shim () {
     echo '<![endif]-->';
 }
 add_action('wp_head', 'add_ie_html5_shim');
-
-
-function my_post_limit($limit) {
-	global $paged, $myOffset;
-	if (empty($paged)) {
-			$paged = 1;
-	}
-	$postperpage = intval(get_option('posts_per_page'));
-	$pgstrt = ((intval($paged) -1) * $postperpage) + $myOffset . ', ';
-	$limit = 'LIMIT '.$pgstrt.$postperpage;
-	return $limit;
-}
-
 
 		
 //Exibe Gravatar
